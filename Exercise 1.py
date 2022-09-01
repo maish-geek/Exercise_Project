@@ -61,8 +61,7 @@
 
 
 
-#Question 1
-
+#Question 3.1
 
 fish = float(input("Enter the length of the Zander:"))
 if fish < 42:
@@ -70,10 +69,7 @@ if fish < 42:
 
 
 
-#Question 2
-
-
-
+#Question 3.2
 
 cabin = str(input("Enter a cabin class: "))
 
@@ -89,31 +85,32 @@ else:
     print("Invalid cabin class!!")
 
 
+#Question 3.3
+
+gender = input("Enter your biological gender Male or Female: ")
+g_l = float(input("Enter haemoglobin value:"))
+
+if gender == "Female":
+
+    if (g_l < 117):
+        print("low Haemoglobin")
+    elif (g_l >= 117 and g_l <= 155):
+        print("Normal Haemoglobin")
+    else:
+        print("High Haemoglobin")/n
+
+if gender == "Male":
+
+    if g_l <134:
+        print("Low Haemoglobin")
+    elif g_l >=135 and g_l <=167:
+        print("Normal Haemoglobin")
+    else:
+        print("High Haemoglobin")
 
 
 
-#Question 3
-
-male = str(input("Enter gender:"))
-hb = float(input("Enter haemoglobin value:"))
-
-if (hb < 117):
-    print("low Haemoglobin")
-elif (hb >= 117 or hb <= 155):
-    print("Normal Haemoglobin")
-elif (hb > 155):
-    print("High Haemoglobin")/n
-
-if hb <134:
-    print("Low Haemoglobin")
-elif hb >=135 or hb <=167:
-    print("Normal Haemoglobin")
-elif hb >167:
-    print("High Haemoglobin")
-
-
-
-#Question 4
+#Question 3.4
 
 import sys
 
