@@ -58,3 +58,69 @@
 #for y in range(4):
  #   fourdigitcode = fourdigitcode + str(randint(1,6))
 #print(fourdigitcode)
+
+
+
+#Question 1
+
+
+fish = float(input("Enter the length of the Zander:"))
+if fish < 42:
+    print("A zander must be 42 cm. Please release the Zander!")
+
+
+
+#Question 2
+
+
+
+
+cabin = str(input("Enter a cabin class: "))
+
+if cabin == str("lux"):
+    print("Upper-deck cabin with a Balcony!")
+elif cabin == str("A"):
+    print ("Above the car deck, equipped with a window.")
+elif cabin == str("B"):
+    print("Windowless cabin above the car deck.")
+elif cabin == str("C"):
+    print("Windowless cabin below the car deck.")
+else:
+    print("Invalid cabin class!!")
+
+
+
+
+
+#Question 3
+
+male = str(input("Enter gender:"))
+hb = float(input("Enter haemoglobin value:"))
+
+if (hb < 117):
+    print("low Haemoglobin")
+elif (hb >= 117 or hb <= 155):
+    print("Normal Haemoglobin")
+elif (hb > 155):
+    print("High Haemoglobin")/n
+
+if hb <134:
+    print("Low Haemoglobin")
+elif hb >=135 or hb <=167:
+    print("Normal Haemoglobin")
+elif hb >167:
+    print("High Haemoglobin")
+
+
+
+#Question 4
+
+import sys
+
+year = int(input("Enter year:"))
+if(year%4 ==0 and year%100 !=0) or (year%400==0):
+    print(year, "Is a leap year!")
+else:
+    print(year, "is not a leap year!")
+
+sys.exit(0)
