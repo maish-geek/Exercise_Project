@@ -97,7 +97,7 @@ if gender == "Female":
     elif (g_l >= 117 and g_l <= 155):
         print("Normal Haemoglobin")
     else:
-        print("High Haemoglobin")/n
+        print("High Haemoglobin")
 
 if gender == "Male":
 
