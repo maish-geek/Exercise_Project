@@ -121,3 +121,71 @@ else:
     print(year, "is not a leap year!")
 
 sys.exit(0)
+
+
+
+
+
+
+# Python program to print numbers divisible by 3 using while loop
+
+#Question 4.1
+
+start = int(input("Enter start number:"))
+end = int(input("Enter last number:"))
+while(start<=end):
+    if(start%3==0):
+      print(start)
+    else:
+        print("Not Divisible!")
+start += 1
+
+#Question 4.2
+
+inches = float(input('Enter the Height in inches to convert into centimeters:'))
+
+centi_meters = inches * 2.54
+centi_meters = round(centi_meters,2)
+
+print(inches,'Inches =', centi_meters,'Centimeters')
+
+
+#Question 4.3
+
+current_number = int(input("Enter numbers:"))
+lowest = current_number
+highest = current_number
+
+while current_number != "":
+    if current_number <lowest:
+        lowest = current_number
+    if current_number >highest:
+        highest = current_number
+
+current_number = input("Enter numbers:")
+if current_number != "":
+    current_number = int(current_number)
+
+    print("lowest:", lowest, "highest:", highest)
+
+
+#Question 4.4
+
+
+
+#Question 5
+
+print('Enter correct username and password combo to continue')
+count=0
+password=rules
+username=python
+
+while password!='rules' and username!='python' and count<5:
+    username=input('Enter username: ') and password=input('Enter password: ')
+
+    if password=='rules' and username=='python':
+     print('Welcome')
+
+    else:
+        print('Access denied. Try again.')
+        count-=1
