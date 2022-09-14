@@ -216,6 +216,21 @@ def roll_dice(num_dice):
         print(f'Roll #{i} = {(roll := random.randint(1, 6))}')
         rolls += roll
     return rolls
+   
+   #Question 5.2
+
+uinput = 0
+
+while ( uinput !=''):
+    
+    uinput = input ("Give a number")
+    if (uinput == ''):
+        break;
+        
+    number = int(uinput)
+    print(number)
+    
+print("The End!")
 
 
 main()
