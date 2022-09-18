@@ -216,36 +216,40 @@ def roll_dice(num_dice):
         print(f'Roll #{i} = {(roll := random.randint(1, 6))}')
         rolls += roll
     return rolls
-   
-   #Question 5.2
 
-uinput = 0
+#Question 5.2
+print("Input integers with a pace between:")
+nums = list(map(int, input().split()))
+dsc_nums = sorted(nums, reverse=True)
+print("Descending Numbers: ", dsc_nums)
 
-while ( uinput !=''):
-    
-    uinput = input ("Give a number")
-    if (uinput == ''):
-        break;
-        
-    number = int(uinput)
-    print(number)
-    
-print("The End!")
 
 
 main()
 
 #Question 5.3
 
-x = input('Enter an integer: ')
-prime = True  # initial set
+num = int(input("Enter a number: "))
 
-for i in range(2, x):
-    if x % i == 0:
-        prime = False
-        break
+if num > 1:
 
-if prime:
-    print(str(x) + ' is prime.')
+    for i in range(2, num):
+        if (num % i) == 0:
+            print(num, "is not a prime number")
+            print(i, "times", num // i, "is", num)
+            break
+    else:
+        print(num, "is a prime number")
+
+
 else:
-    print(str(x) + ' is not prime')
+    print(num, "is not a prime number")
+
+#Question 5.4
+
+print("Input five cities:")
+cities = list(map(str, input().split()))
+for city in cities:
+    print(city)
+  
+  
