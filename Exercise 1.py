@@ -252,4 +252,79 @@ cities = list(map(str, input().split()))
 for city in cities:
     print(city)
   
+#Question 6.1
+
+def dice_roll():
+    return random.randint(1,6)
+
+value = dice_roll()
+
+while value != 6:
+    print("The result of dice rolled is", value)
+    value = dice_roll()
+    if value == 6:
+        print("End of rolling because you have a", value)
+
+#Question 6.3
+
+def conver_gal(lit):
+    conversion = 3.7854 * lit
+    return conversion
+
+fuel = int(input("Enter the volume of your gasoline in US.gallons:"))
+print(f"{conver_gal(fuel):.2f} litres")
+
+#Question 6.4
+
+def list_int(values):
+    sum = sum(values)
+    print(sum)
+
+list1 = [2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+(list_int(list1))
+
+#Question 6.5
+
+def con_value(slave):
+    for num in slave:
+        if num % 2 == 0:
+            list_2.append(num)
+    print("Here is the original list", slave)
+    print("Here is the list without uneven numbers", list_2)
+
+list_1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+list_2 = []
+
+con_value(list_1)
+
+#Question 6.6
+
+def pizza_price(pizza_diameter, unit_price):
+
+    area_pizza = 3.143 * (pizza_diameter/2)**2
+    single = unit_price/ area_pizza
+    return single
+
+size_rosapizza = int(input("Enter the diameter size of Rosa pizza:"))
+size_hutpizza = int(input("Enter the diameter size of Hut pizza"))
+price_rosapizza = float(input("Enter the price of the Rosa pizza option"))
+price_hutpizza = float(input("Enter the price of the Hut pizza option"))
+
+rosapizza = pizza_price(size_rosapizza, price_rosapizza)
+hutpizza = pizza_price(size_hutpizza, price_hutpizza)
+
+print(f"{rosapizza:2f} euro per m2")
+print(f"{hutpizza:2f} euro per m2")
+
+if rosapizza < hutpizza:
+    print("Rosa Pizza has a much lower unit price")
+
+else:
+    print("Hut Pizza has a much lower unit price")
+
+  
+  
+  
+  
   
