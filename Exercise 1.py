@@ -264,6 +264,33 @@ while value != 6:
     value = dice_roll()
     if value == 6:
         print("End of rolling because you have a", value)
+      
+#Question 6.2
+
+import random
+
+def main():
+  
+    while True:
+        num_dice = int(input('How many dice do you want to roll?'))
+        if num_dice < 1 or num_dice > 6:
+            print('Enter a number between 1 and 6.')
+        else:
+            break
+    result = roll_dice(num_dice)
+    print(f'The total for {num_dice} rolls was {result}.')
+
+
+def roll_dice(num_dice):
+    rolls = 0
+    for i in range(1, num_dice + 1):
+       
+        print(f'Roll #{i} = {(roll := random.randint(1, 21))}')
+        rolls += roll
+    return rolls
+
+
+main()
 
 #Question 6.3
 
