@@ -411,6 +411,40 @@ while True:
             code = input("Enter a 3-letter airport code:").upper()
         print(airports[code])
 
+#Question 8.1
+
+import mysql.connector
+
+conn = mysql.connector.connect(host="localhost",
+                               user="root",
+                               password="NjugunaM@93",
+                               database="flight_game"
+                               )
+
+user = input("Enter the ICAO code of any airport:")
+config = conn.cursor()
+config.execute("select name, location from airports, game where ident = " + "'" + user + "'")
+
+for i in config:
+    print(i)
+
+#Question 8.2
+
+import mysql.connector
+
+conn = mysql.connector.connect(host="localhost",
+                               user="root",
+                               password="NjugunaM@93",
+                               database="flight_game"
+                               )
+
+user = input("Enter the area code of any country:")
+synt = "select name, type from airports, where iso_country = " + "'" + user + "'" + "order by type desc"
+config = conn.cursor()
+config.execute(synt)
+
+for i in config:
+    print(i)
 
 
   
