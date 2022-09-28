@@ -324,7 +324,68 @@ else:
     print("Hut Pizza has a much lower unit price")
 
   
-  
+
+#Question 7.1
+
+my_tuple = ('spring', 'summer', 'autumn', 'winter')
+month = input("Input the month number: ")
+if month=='12' or month=='1' or month=='2':
+    print(my_tuple[3])
+if month=='3'or month=='4'or month=='5':
+    print(my_tuple[0])
+if month=='6' or month=='7' or month=='8':
+    print(my_tuple[1])
+if month=='9' or month=='10' or month=='11':
+    print(my_tuple[2])
+
+
+#Question 7.2
+
+while True:
+    user_input = input("Please enter a name :")
+    myset.add(user_input)
+    if user_input == '':
+        break
+
+    print(myset)
+
+#Question 7.3
+
+import sys
+
+airports = {"ATL": "Hartsfield–Jackson Atlanta International Airport",
+            "AMS": "Amsterdam Airport Schiphol",
+            "DEL": "Indira Gandhi International Airport (Delhi)",
+            "CAN": "Guangzhou Baiyun International Airport",
+            "FRA": "Frankfurt Airport",
+            "DFW": "Dallas/Fort Worth International Airport",
+            "ICN": "Seoul Incheon International Airport",
+            "IST": "Istanbul Atatürk Airport",
+            "CGK": "Soekarno-Hatta International Airport",
+            "SIN": "Singapore Changi Airport",
+            "DEN": "Denver International Airport",
+            }
+
+while True:
+    user_input = input(
+        "Do you want to  enter a new airport(enter), fetch the information of an existing airport(fetch) or quit(q)")
+    if user_input == 'q':
+        break
+    if user_input == 'enter':
+        enter = input("Enter a ICAO number and name of Airport:")
+        print(enter)
+    if user_input == 'fetch':
+        code = input("Enter a 3-letter airport code:").upper()
+        while len(code) != 3:
+            print("Invalid airport code.")
+            code = input("Enter a 3-letter airport code:").upper()
+        while not code in airports:
+            print("Airport code not recognised. Please try again with a different airport code.")
+            code = input("Enter a 3-letter airport code:").upper()
+        print(airports[code])
+
+
+
   
   
   
